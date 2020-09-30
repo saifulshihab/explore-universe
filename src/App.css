@@ -1,0 +1,28 @@
+.header {
+  margin: 10px;
+  width: 100%;
+}
+.country__details {
+  padding: 10px;
+}
+.flag img{
+    width: 100%;
+}
+.country__details h3 {
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+.country_additional_info .title {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.country_additional_info .val {
+  display: inline-block;
+  font-style: italic;
+}
+.ainfo {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: 500;
+}
