@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card, Row, Col } from 'antd';
 import Countrydetails from './CountryDetails';
-// import { EyeOutlined } from '@ant-design/icons';
+import { Fade } from 'react-animation-components';
 
 const { Meta } = Card;
 
@@ -38,19 +38,20 @@ function Continents(props) {
     <div>
       <Row>
         <Col span={details ? 12 : 24}>
-          {filterContinent.map((continent, index) => (
-            <Col key={index} style={{ display: 'inline-block' }} span={3}>
-              <Card
-                onClick={() => detailsHandler(continent.name)}
-                style={{ width: '95%', cursor: 'pointer' }}
-                cover={<img alt={continent.name} src={continent.flag} />}
-                /* actions={[<EyeOutlined />]} */
-              >
-                <Meta title={continent.name} />
-                {continent.cioc}
-              </Card>
-            </Col>
-          ))}
+          <Fade in>
+            {filterContinent.map((continent, index) => (
+              <Col key={index} className="_continent" span={3}>
+                <Card
+                  onClick={() => detailsHandler(continent.name)}
+                  style={{ width: '95%', cursor: 'pointer' }}
+                  cover={<img alt={continent.name} src={continent.flag} />}
+                >
+                  <Meta title={continent.name} />
+                  {continent.cioc}
+                </Card>
+              </Col>
+            ))}
+          </Fade>
         </Col>
         {details ? <Countrydetails country={country} /> : <></>}
       </Row>

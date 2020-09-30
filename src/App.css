@@ -3,10 +3,12 @@
   width: 100%;
 }
 .country__details {
+  border: 1px solid #ddd;
+  border-radius: 10px;
   padding: 10px;
 }
-.flag img{
-    width: 100%;
+.flag img {
+  width: 100%;
 }
 .country__details h3 {
   margin-top: -15px;
@@ -25,4 +27,8 @@
   display: inline-block;
   margin-right: 10px;
   font-weight: 500;
+}
+._continent {
+  display: inline-block !important;
+  height: 240px !important;
 }
