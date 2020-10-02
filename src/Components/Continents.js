@@ -36,11 +36,11 @@ function Continents(props) {
 
   return (
     <div>
-      <Row>
+      <Row style={{textAlign: "center"}}>
         <Col span={details ? 12 : 24}>
           <Fade in>
             {filterContinent.map((continent, index) => (
-              <Col key={index} className="_continent" span={3}>
+              <Col key={index} className="_continent" md={4} lg={3} sm={6}>
                 <Card
                   onClick={() => detailsHandler(continent.name)}
                   style={{ width: '95%', cursor: 'pointer' }}
