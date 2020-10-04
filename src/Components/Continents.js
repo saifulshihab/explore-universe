@@ -36,7 +36,7 @@ function Continents(props) {
 
   return (
     <div>
-      <Row style={{textAlign: "center"}}>
+      <Row>
         <Col span={details ? 12 : 24}>
           <Fade in>
             {filterContinent.map((continent, index) => (
